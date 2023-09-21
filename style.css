@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     padding: 0;
@@ -28,6 +32,12 @@ header .limite div {
     width: 100%;
 }
 
+.logodesktop {
+    max-width: 720px;
+    width: 100%;
+    display: none;
+}
+
 .title {
     color: #B52184;
     font-size: 32px;
@@ -49,14 +59,20 @@ header .limite div {
 }
 
 main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+}
+
+main .limitemain {
     padding: 50px 40px;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-main div {
+main .limitemain div {
     background-color: white;
     border-radius: 20px;
     padding: 20px;
@@ -87,6 +103,11 @@ section h2 {
     font-size: 28px;
     font-family: 'Mulish', sans-serif;
     font-weight: 700;
+}
+
+section .limiteform {
+    display: flex;
+    flex-direction: column;
 }
 
 section form {
@@ -145,7 +166,7 @@ footer {
 
 @media only screen and (min-width: 992px) {
     header {
-        padding: 0px 40px;
+        padding: 0px 40px 120px;
     }
 
     header .limite {
@@ -157,9 +178,70 @@ footer {
 
     header .limite div {
         align-items: flex-start;
+        min-height: 730px;
+        justify-content: flex-end;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logodesktop {
+        display: block;
+    }
+
+    .title {
+        font-size: 58px;
+    }
+
+    .subtitle {
+        font-size: 32px;
     }
 
     .arrow {
-        margin: 20px 0px 100px 0px;
+        margin: 190px 0px 0px 0px;
+    }
+
+    main {
+        padding: 0px 40px;
+    }
+
+    main .limitemain {
+        flex-direction: row;
+        width: 100%;
+        max-width: 1400px;
+        gap: 60px;
+    }
+
+    main .limitemain div {
+        min-height: 332px;
+        width: 33%;
+    }
+
+    main h2 {
+        font-size: 36px;
+    }
+
+    main p {
+        font-size: 20px;
+    }
+
+    section {
+        background: url(assets/star.png) no-repeat right;
+        align-items: center;
+    }
+
+    section form {
+        max-width: 595px;
+        width: 100%;
+    }
+
+    section .limiteform {
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    section h2 {
+        font-size: 42px;
     }
 }
